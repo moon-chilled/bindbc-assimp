@@ -115,7 +115,7 @@ extern(System) @nogc nothrow {
             aiMatrix4x4* mat);
     size_t aiGetImportFormatCount();
     const(aiImporterDesc*) aiGetImportFormatDescription( size_t pIndex);
-    const(aiImporterDesc*) aiGetImporterDesc( const char *extension );
+    //const(aiImporterDesc*) aiGetImporterDesc( const char *extension );
     aiReturn aiGetMaterialProperty(
             const aiMaterial* pMat,
             const char* pKey,

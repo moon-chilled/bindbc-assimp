@@ -119,7 +119,7 @@ extern(System) @nogc nothrow {
             aiMatrix4x4* mat);
     alias p_aiGetImportFormatCount =     size_t function();
     alias p_aiGetImportFormatDescription =     const(aiImporterDesc*) function( size_t pIndex);
-    alias p_aiGetImporterDesc =     const(aiImporterDesc*) function( const char *extension );
+    //alias p_aiGetImporterDesc =     const(aiImporterDesc*) function( const char *extension );
     alias p_aiGetMaterialProperty =     aiReturn function(
             const aiMaterial* pMat,
             const char* pKey,
@@ -218,7 +218,7 @@ __gshared {
     p_aiIdentityMatrix4 aiIdentityMatrix4;
     p_aiGetImportFormatCount aiGetImportFormatCount;
     p_aiGetImportFormatDescription aiGetImportFormatDescription;
-    p_aiGetImporterDesc aiGetImporterDesc;
+    //p_aiGetImporterDesc aiGetImporterDesc;
     p_aiGetMaterialProperty aiGetMaterialProperty;
     p_aiGetMaterialFloatArray aiGetMaterialFloatArray;
     p_aiGetMaterialIntegerArray aiGetMaterialIntegerArray;
@@ -326,7 +326,7 @@ AssimpSupport loadAssimp(const(char)* libName)
     lib.bindSymbol_stdcall(aiIdentityMatrix4, "aiIdentityMatrix4");
     lib.bindSymbol_stdcall(aiGetImportFormatCount, "aiGetImportFormatCount");
     lib.bindSymbol_stdcall(aiGetImportFormatDescription, "aiGetImportFormatDescription");
-    lib.bindSymbol_stdcall(aiGetImporterDesc, "aiGetImporterDesc");
+    //lib.bindSymbol_stdcall(aiGetImporterDesc, "aiGetImporterDesc");
     lib.bindSymbol_stdcall(aiGetMaterialProperty, "aiGetMaterialProperty");
     lib.bindSymbol_stdcall(aiGetMaterialFloatArray, "aiGetMaterialFloatArray");
     lib.bindSymbol_stdcall(aiGetMaterialIntegerArray, "aiGetMaterialIntegerArray");
